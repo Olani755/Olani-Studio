@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Say Hello">
+  <div>
+    <h1>Say Hello</h1>
+    <form action="/Thank-You">
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Your Full Name"
+        required
+      />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Your Partner's Full Name"
+        required
+      />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Email Address"
+        required
+      />
+      <input type="text" id="lname" name="lname" placeholder="Phone" required />
+      <input type="text" id="lname" name="lname" placeholder="Date" required />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Venue?"
+        required
+      />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Are you working with a wedding coordinatator? if yes, who?"
+        required
+      />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="We are interested in?"
+        required
+      />
+      <div class="submit">
+        <input class="button" type="submit" />
+      </div>
+    </form>
+  </div>
+</Layout>
+<style>
+  h1 {
+    font-size: clamp(2rem, 10vw, 8rem);
+    font-weight: 200;
+    color: #bea390;
+  }
+  form {
+    display: grid;
+    gap: 1rem;
+    background-color: #f3efea;
+    padding: clamp(1rem, 5vw, 4rem);
+    border-radius: 1rem;
+  }
+  input {
+    background-color: transparent;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  input::placeholder {
+    color: #333;
+  }
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #b79639;
+    padding: 1em 2em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .button:hover {
+    opacity: 0.6;
+  }
+  @media (min-width: 1000px) {
+    form {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

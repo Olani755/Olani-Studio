@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import boats from "../images/boats.jpg";
+import mines from "../images/working the salt mines.jpg";
+import machu from "../images/machu picchu.jpg";
+import dock from "../images/boat dock.jpg";
+import adventure from "../images/adventure.jpg";
+import mountain from "../images/rainbow mountain.jpg";
+import boats2 from "../images/boats lined up.jpg";
+import saltmines from "../images/salt mines.jpg";
+import mountains from "../images/mountains.jpg";
+import josh from "../images/Josh and Aleyda.jpg";
+---
+
+<Layout title="What We Do">
+  <section class="what-we-do">
+    <img src={josh} alt="Josh and Aleyda" width="600px" height="800px" />
+    <div class="content">
+      <p>
+        Looking for a skilled photographer to capture the precious moments of
+        your life? Look no further! I am a talented photographer with the
+        experience and expertise to deliver results that exceed your
+        expectations.
+      </p>
+      <p>
+        Whether you're looking for a family portrait, a wedding photographer, or
+        a commercial shoot, I will work closely with you to understand your
+        needs and preferences, ensuring that every shot is perfect.
+      </p>
+      <p>
+        My passion for photography is evident in every image I capture. I use
+        the latest equipment and editing techniques to produce high-quality,
+        professional-grade photographs that will last a lifetime. My goal is to
+        create images that tell a story and evoke emotion, capturing the essence
+        of your special moments.
+      </p>
+      <p>
+        Don't trust your memories to just anyone. Choose a photographer who is
+        dedicated to delivering exceptional results and capturing the magic of
+        your life's milestones. Contact me today to schedule your next
+        photography session!
+      </p>
+    </div>
+  </section>
+  <section class="portfolio-section">
+    <div class="wrapper">
+      <h1>Portfolio</h1>
+      <article class="portfolio">
+        <img
+          src={boats}
+          alt="boats on dock"
+          width="450"
+          height="400"
+          loading="lazy"
+        />
+        <img src={mines} alt="mines" width="450" height="400" />
+        <img src={machu} alt="machu" width="450" height="400" />
+        <img src={dock} alt="dock" width="450" height="400" />
+        <img src={adventure} alt="adventure" width="450" height="400" />
+        <img src={mountain} alt="mountain" width="450" height="400" />
+        <img src={boats2} alt="boats2" width="450" height="400" />
+        <img src={saltmines} alt="salt mines" width="450" height="400" />
+        <img src={mountains} alt="mountains" width="450" height="400" />
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 3rem;
+  }
+
+  .portfolio {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1rem;
+  }
+
+  .what-we-do {
+    padding: clamp(1rem, 5vw, 4rem);
+    background-color: #f3efea;
+    font-size: 1.125rem;
+    margin-block-end: 2rem;
+    border-radius: 0.25rem;
+  }
+
+  .what-we-do img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.25rem;
+  }
+
+  .content {
+    margin-block-start: 1rem;
+    line-height: 1.7;
+  }
+
+  .content p {
+    margin-block-end: 1rem;
+  }
+
+  .portfolio img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  @media (min-width: 800px) {
+    .portfolio {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .what-we-do {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .what-we-do img {
+      aspect-ratio: initial;
+    }
+
+    .content {
+      margin: 0;
+    }
+
+    .wrapper {
+      width: min(100% - 2rem, 100ch);
+      margin-inline: auto;
+    }
+  }
+</style>

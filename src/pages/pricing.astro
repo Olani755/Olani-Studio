@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Pricing">
+  <h1>Pricing</h1>
+  <div class="pricing">
+    <h2 class="pricing-intro">
+      We develop your memories into family heirlooms
+    </h2>
+    <article class="intro-paragraph">
+      <p>
+        Serving the Greater Houston area, our award-winning Said Yes Studios
+        team captures your day’s most intimate moments on film.
+      </p>
+      <p>
+        All of our wedding photography packages and videography packages include
+        a password-protected online gallery for viewing and downloading your
+        high-resolution photographs and films. Further personalize your
+        collection by choosing one of our à la carte package additions to ensure
+        we capture the special moments so you don’t miss a single moment of your
+        first day of forever. Multiple pricing options are available for Photo,
+        Video, and Photo/Video Combo Packages.
+      </p>
+    </article>
+  </div>
+
+  <section class="package">
+    <h2>Photography <br /> Packages</h2>
+    <div class="package-content">
+      <p>Packages Pricing Starts at $1,550!</p>
+      <p>
+        Enchanting and expressive in their candor, our Photography Packages
+        place your big day’s special moments into perspective to compose an
+        image-driven narrative recounting the epic love story that led you both
+        to forever. Each package includes an online high-resolution final photo
+        gallery for view or print because forever is worth more than a thousand
+        words.
+      </p>
+      <p class="lead">Start planning your forever</p>
+      <a class="button" href="/say-hello">Learn More</a>
+    </div>
+  </section>
+
+  <section class="package">
+    <h2>Videography <br /> Packages</h2>
+    <div class="package-content">
+      <p>Packages Pricing Starts at $1,550!</p>
+      <p>
+        Cinematic, timeless, dreamy. The Videography Packages bring forever into
+        focus, unveiling emotionally charged moments and tying them together
+        with a gossamer thread. Each package includes a one-minute teaser video,
+        up to five minutes of wedding day highlights, a fifteen-minute toast
+        documentary, and an online final film for view and download, allowing
+        you to relive your happily ever after—today, tomorrow, forever.
+      </p>
+      <p class="lead">Start planning your forever</p>
+      <a class="button" href="/say-hello">Learn More</a>
+    </div>
+  </section>
+
+  <section class="package">
+    <h2>Photo/Video <br /> Combo Packages</h2>
+    <div class="package-content">
+      <p>Packages Pricing Starts at $2,950!</p>
+      <p>
+        The Photo/Video Combo Packages unite two into one, coupling our
+        photojournalistic still shots with glimpses into your big day’s most
+        intimate moments, captured artfully on film. Each package includes a
+        one-minute teaser video, up to five minutes of wedding day highlights, a
+        fifteen-minute toast documentary, and a private digital gallery for
+        view, download, and print—to have and to hold as long as you both shall
+        live.
+      </p>
+      <p class="lead">Start planning your forever</p>
+      <a class="button" href="/say-hello">Learn More</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .pricing p {
+    margin-block-end: 1rem;
+  }
+
+  .pricing h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-transform: uppercase;
+    margin-block-end: 1rem;
+  }
+
+  .package {
+    background-color: #f3efea;
+    padding: clamp(1rem, 5vw, 3rem);
+    margin-block: 2rem;
+    border-radius: 0.5em;
+  }
+
+  .package h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 600;
+    margin-block-end: 0.25rem;
+  }
+
+  .package p:not(.lead) {
+    margin-bottom: 1em;
+  }
+
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #b79639;
+    padding: 1em 2em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.3s;
+  }
+
+  .button:hover {
+    opacity: 0.6;
+  }
+
+  .lead {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-block-start: 3em;
+  }
+
+  @media (min-width: 800px) {
+    h1 {
+      margin-block-start: 4rem;
+    }
+
+    .package {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-block-start: 2rem;
+    }
+
+    .pricing-intro {
+      padding-inline: 3rem;
+    }
+  }
+</style>

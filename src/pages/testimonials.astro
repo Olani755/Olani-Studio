@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro"
+import hero from "../images/maria and ceasar.jpg"
+import julio from "../images/julio and blanca.jpg"
+import efrain from "../images/Efrain and lili w:guest.jpg"
+import cesar from "../images/ceasar and maria.jpg"
+---
+
+<Layout title="Testimonials">
+  <img
+    class="hero-image"
+    src={hero}
+    alt=""
+    fetchpriority="high"
+    height="640"
+    width="1152"
+  />
+  <div class="wrapper">
+    <h1 class="header">Testimonials</h1>
+    <p>
+      I am a skilled photographer with a strong track record of delivering
+      high-quality work. My clients have consistently left positive reviews,
+      praising my attention to detail, creativity, and professionalism. I am
+      proud to have built a reputation as a reliable and talented photographer.
+    </p>
+    <div class="testimonial">
+      <img
+        src={julio}
+        alt="Papa Julio and Mama Blanca"
+        width="450"
+        height="300"
+      />
+      <article>
+        <p>Julio + Blanca</p>
+        <p>
+          Olani is such an amazing photographer. I hired him last minute when my
+          other photographer bailed just a few days before my trip and I’m so
+          glad that he was there. He was energetic, even with it being outside
+          and 95 degrees. So many people complimented his ability to keep things
+          running smoothly and quickly. Best experience I’ve ever had with a
+          photographer!! Thank you so much Olani!
+        </p>
+      </article>
+    </div>
+    <div class="testimonial">
+      <img src={efrain} alt="ceasar and maria" width="450" height="300" />
+      <article class="test-para">
+        <p>Lily + Efrain</p>
+        <p>
+          We could not have been happier with Olani. He was incredible at our
+          engagement photoshoot and our wedding. Our engagement shoot photos
+          turned out great, and I can’t wait to see the wedding pictures. He was
+          creative with his ideas and very understanding and helpful in
+          delivering what we wanted. I highly recommend this talented
+          photographer.
+        </p>
+      </article>
+    </div>
+    <div class="testimonial">
+      <img src={cesar} alt="ceasar and maria" width="450" height="300" />
+      <article class="test-para">
+        <p>Ceasar + Maria</p>
+        <p>
+          He is a natural talent. We wanted “Pinterest” style photos, and that’s
+          exactly what he delivered…He was so patient with my wife and her
+          family when only half were to be found at any moment. He worked so
+          well with our planner in making sure everything was as on-time as
+          possible. He was very professional with everyone, vendors and guests
+          alike. We would definitely recommend (and hire again) Olani.
+        </p>
+      </article>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+  }
+  .wrapper {
+    width: min(1200px, 100%);
+    margin-inline: auto;
+  }
+
+  .header {
+    margin-block: 2rem;
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 100rem;
+    max-height: 40rem;
+    object-fit: cover;
+    object-position: 0% 15%;
+    margin-inline: auto;
+    margin-block-end: 2rem;
+  }
+
+  .testimonial {
+    display: grid;
+    gap: 2rem;
+    margin-block: 2rem;
+  }
+
+  .testimonial img {
+    aspect-ratio: 1;
+  }
+
+  @media (min-width: 800px) {
+    .testimonial {
+      grid-template-columns: 450px 1fr;
+      align-items: center;
+    }
+  }
+</style>
